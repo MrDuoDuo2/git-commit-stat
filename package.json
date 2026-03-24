@@ -1,0 +1,86 @@
+{
+  "name": "git-commit-stats",
+  "displayName": "Git Commit Stats",
+  "description": "统计当前项目中指定用户的 Git 提交量",
+  "version": "0.0.1",
+  "publisher": "zyx",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "git-commit-stats",
+          "title": "Git Commit Stats",
+          "icon": "$(graph)"
+        }
+      ],
+      "panel": [
+        {
+          "id": "git-commit-stats-panel",
+          "title": "Git Stats",
+          "icon": "$(graph)"
+        }
+      ]
+    },
+    "views": {
+      "git-commit-stats": [
+        {
+          "type": "webview",
+          "id": "gitCommitStats.sidebar",
+          "name": "统计面板"
+        }
+      ],
+      "git-commit-stats-panel": [
+        {
+          "type": "webview",
+          "id": "gitCommitStats.dailyPanel",
+          "name": "每日统计"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "git-commit-stats.countByAuthor",
+        "title": "Git Commit Stats: 按作者统计提交量"
+      },
+      {
+        "command": "git-commit-stats.countByEmail",
+        "title": "Git Commit Stats: 按邮箱统计提交量"
+      },
+      {
+        "command": "git-commit-stats.showAllAuthors",
+        "title": "Git Commit Stats: 显示所有作者提交统计"
+      },
+      {
+        "command": "git-commit-stats.openPanel",
+        "title": "Git Commit Stats: 打开统计面板"
+      },
+      {
+        "command": "git-commit-stats.openDailyPanel",
+        "title": "Git Commit Stats: 打开每日统计"
+      },
+      {
+        "command": "git-commit-stats.configureStatusBar",
+        "title": "Git Commit Stats: 配置状态栏统计"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.0.0"
+  }
+}
