@@ -4,6 +4,10 @@
   "description": "统计当前项目中指定用户的 Git 提交量",
   "version": "0.0.1",
   "publisher": "zyx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrDuoDuo2/git-commit-stat.git"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
