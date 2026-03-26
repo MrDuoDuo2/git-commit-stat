@@ -2,7 +2,7 @@
   "name": "git-commit-stats",
   "displayName": "Git Commit Stats",
   "description": "统计当前项目中指定用户的 Git 提交量",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "publisher": "zyx",
   "repository": {
     "type": "git",
